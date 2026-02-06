@@ -22,11 +22,7 @@
   <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/zetalabs.cl-e8f0fe?style=for-the-badge&logo=google-chrome&logoColor=0550ae" />
   <img src="https://img.shields.io/badge/zetalabs.cl-0d1117?style=for-the-badge&logo=google-chrome&logoColor=58a6ff" alt="Website" />
 </picture></a>&nbsp;
-<a href="https://linkedin.com/in/rzurita"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2" />
-  <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/LinkedIn-e8f0fe?style=for-the-badge&logo=linkedin&logoColor=0A66C2" />
-  <img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" />
-</picture></a>&nbsp;
+
 <a href="https://github.com/zeert"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=ffffff" />
   <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/GitHub-e8f0fe?style=for-the-badge&logo=github&logoColor=24292f" />
@@ -52,16 +48,16 @@
 ### 🧑‍💻 About Me
 
 ```yaml
-name: Reinaldo Zurita
-role: CTO & Co-founder
-company: Zetalabs SpA
-location: Santiago, Chile 🇨🇱
-focus:
+Name: Reinaldo Zurita
+Role: CTO & Co-founder
+Company: Zetalabs SpA
+Location: Santiago, Chile 🇨🇱
+Focus:
   - Full-Stack Development
   - Cloud Architecture (AWS)
   - Digital Marketing & Ads
   - Business Intelligence
-currently:
+Currently:
   - Building scalable web & mobile apps
   - Managing cloud infrastructure
   - Crafting digital strategies
