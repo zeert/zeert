@@ -9,7 +9,7 @@
 
 <!-- TYPING SVG - Adaptive -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=55&lines=Building+digital+solutions+from+Santiago%2C+Chile+%F0%9F%87%A8%F0%9F%87%B1;Turning+ideas+into+scalable+products+%F0%9F%9A%80;Code+%2B+Design+%2B+Strategy+%3D+Zetalabs+%E2%9A%A1" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=650&height=58&lines=Building+digital+solutions+from+Santiago%2C+Chile+%F0%9F%87%A8%F0%9F%87%B1;Turning+ideas+into+scalable+products+%F0%9F%9A%80;Code+%2B+Design+%2B+Strategy+%3D+Zetalabs+%E2%9A%A1" />
   <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=0550AE&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=55&lines=Building+digital+solutions+from+Santiago%2C+Chile+%F0%9F%87%A8%F0%9F%87%B1;Turning+ideas+into+scalable+products+%F0%9F%9A%80;Code+%2B+Design+%2B+Strategy+%3D+Zetalabs+%E2%9A%A1" />
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=55&lines=Building+digital+solutions+from+Santiago%2C+Chile+%F0%9F%87%A8%F0%9F%87%B1;Turning+ideas+into+scalable+products+%F0%9F%9A%80;Code+%2B+Design+%2B+Strategy+%3D+Zetalabs+%E2%9A%A1" alt="Typing SVG" />
 </picture>
