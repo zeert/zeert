@@ -36,26 +36,56 @@ const rows = repos
 
 const table = `\n| Repo | Descripción | Lenguaje |\n| :--- | :--- | :--- |\n${rows}\n`;
 
-// --- Lenguajes: agregación de bytes reales sobre todos los repos ---
-const allRepos = (
-  await (
-    await fetch(
-      `https://api.github.com/users/${USER}/repos?per_page=100&type=owner`,
-      { headers }
-    )
-  ).json()
-).filter((r) => !r.fork && !r.archived);
+// --- Lenguajes: repos recientes (últimos 18 meses), personales + org,
+//     normalizados por repo para que ningún monolito viejo domine. ---
+const ORG = "ZetalabsCL";
+const MONTHS = 18;
+const cutoff = Date.now() - MONTHS * 30 * 24 * 3600 * 1000;
 
+async function fetchAll(url) {
+  const r = await fetch(url, { headers });
+  return r.ok ? await r.json() : [];
+}
+
+const personal = await fetchAll(
+  `https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=pushed`
+);
+const orgRepos = await fetchAll(
+  `https://api.github.com/orgs/${ORG}/repos?per_page=100&type=all&sort=pushed`
+);
+
+const seen = new Set();
+let scan = [...personal, ...orgRepos].filter((r) => {
+  if (!r || r.fork || r.archived || seen.has(r.full_name)) return false;
+  seen.add(r.full_name);
+  return new Date(r.pushed_at).getTime() >= cutoff;
+});
+// Si quedan muy pocos repos recientes, relaja el filtro de fecha.
+if (scan.length < 4) {
+  seen.clear();
+  scan = [...personal, ...orgRepos].filter((r) => {
+    if (!r || r.fork || r.archived || seen.has(r.full_name)) return false;
+    seen.add(r.full_name);
+    return true;
+  });
+}
+
+// Peso por recencia: media vida de 12 meses (lo reciente pesa más).
 const totals = {};
-for (const r of allRepos) {
+for (const r of scan) {
   const lr = await fetch(r.languages_url, { headers });
   if (!lr.ok) continue;
   const langs = await lr.json();
+  const repoBytes = Object.values(langs).reduce((a, b) => a + b, 0);
+  if (!repoBytes) continue;
+  const monthsAgo = (Date.now() - new Date(r.pushed_at).getTime()) / (30 * 24 * 3600 * 1000);
+  const weight = Math.pow(0.5, monthsAgo / 12);
   for (const [name, bytes] of Object.entries(langs)) {
-    totals[name] = (totals[name] || 0) + bytes;
+    totals[name] = (totals[name] || 0) + (bytes / repoBytes) * weight;
   }
 }
 
+console.log(`Repos escaneados para lenguajes: ${scan.length}`);
 const grand = Object.values(totals).reduce((a, b) => a + b, 0) || 1;
 const top = Object.entries(totals)
   .sort((a, b) => b[1] - a[1])
