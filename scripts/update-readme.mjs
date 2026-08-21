@@ -36,11 +36,47 @@ const rows = repos
 
 const table = `\n| Repo | Descripción | Lenguaje |\n| :--- | :--- | :--- |\n${rows}\n`;
 
+// --- Lenguajes: agregación de bytes reales sobre todos los repos ---
+const allRepos = (
+  await (
+    await fetch(
+      `https://api.github.com/users/${USER}/repos?per_page=100&type=owner`,
+      { headers }
+    )
+  ).json()
+).filter((r) => !r.fork && !r.archived);
+
+const totals = {};
+for (const r of allRepos) {
+  const lr = await fetch(r.languages_url, { headers });
+  if (!lr.ok) continue;
+  const langs = await lr.json();
+  for (const [name, bytes] of Object.entries(langs)) {
+    totals[name] = (totals[name] || 0) + bytes;
+  }
+}
+
+const grand = Object.values(totals).reduce((a, b) => a + b, 0) || 1;
+const top = Object.entries(totals)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 8);
+
+const BARW = 22;
+const pad = Math.max(...top.map(([n]) => n.length));
+const langBlock = top
+  .map(([name, bytes]) => {
+    const pct = (bytes / grand) * 100;
+    const filled = Math.round((pct / 100) * BARW);
+    const bar = "█".repeat(filled) + "░".repeat(BARW - filled);
+    return `${name.padEnd(pad)}  ${bar}  ${pct.toFixed(1).padStart(5)}%`;
+  })
+  .join("\n");
+const LANG_START = "<!--START_SECTION:langs-->";
+const LANG_END = "<!--END_SECTION:langs-->";
+const langSection = `${LANG_START}\n\`\`\`text\n${langBlock}\n\`\`\`\n${LANG_END}`;
+
 let readme = readFileSync(README, "utf8");
-const block = `${START}${table}${END}`;
-readme = readme.replace(
-  new RegExp(`${START}[\\s\\S]*?${END}`),
-  block
-);
+readme = readme.replace(new RegExp(`${START}[\\s\\S]*?${END}`), `${START}${table}${END}`);
+readme = readme.replace(new RegExp(`${LANG_START}[\\s\\S]*?${LANG_END}`), langSection);
 writeFileSync(README, readme);
-console.log(`README actualizado con ${repos.length} repos.`);
+console.log(`README actualizado: ${repos.length} repos, ${top.length} lenguajes.`);
