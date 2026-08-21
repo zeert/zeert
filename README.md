@@ -75,6 +75,23 @@ Enfoque:
 
 ---
 
+### 📌 Últimos proyectos
+
+<!--START_SECTION:repos-->
+| Repo | Descripción | Lenguaje |
+| :--- | :--- | :--- |
+| [**blade-runner-2049-theme**](https://github.com/zeert/blade-runner-2049-theme) | Blade Runner 2049 — VS Code dark theme. Warm ambers, golds, and cyans on dark near-black backgrounds. |  |
+| [**hgi-dashboard**](https://github.com/zeert/hgi-dashboard) | — | `Python` |
+| [**grunt-base**](https://github.com/zeert/grunt-base) | Repositorio base para trabajar con Grunt y HTML | `HTML` |
+| [**tws**](https://github.com/zeert/tws) | nuevo repo de tws | `CSS` |
+| [**masterapp**](https://github.com/zeert/masterapp) | — |  |
+| [**Gestor-Proyectos**](https://github.com/zeert/Gestor-Proyectos) | — | `Java` |
+<!--END_SECTION:repos-->
+
+<sub>⚡ Actualizado automáticamente vía GitHub Actions</sub>
+
+---
+
 ### 🏢 Zetalabs SpA
 
 > **No somos una agencia genérica. Somos ingenieros que entienden de negocios.**
