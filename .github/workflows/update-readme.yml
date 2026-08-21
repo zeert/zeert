@@ -23,7 +23,9 @@ jobs:
           node-version: "20"
       - name: Actualizar sección de proyectos
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # METRICS_TOKEN (PAT con lectura de repos privados/org) si existe;
+          # si no, cae al GITHUB_TOKEN (solo repos públicos).
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
         run: node scripts/update-readme.mjs
       - name: Commit si hay cambios
         run: |
