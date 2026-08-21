@@ -42,8 +42,6 @@ Enfoque:
   - Automatización e IA aplicada
 ```
 
-<img align="right" width="49%" src="https://github-readme-stats.vercel.app/api?username=zeert&show_icons=true&theme=transparent&hide_border=true&icon_color=EE3A43&title_color=EE3A43&text_color=8b949e&count_private=true&include_all_commits=true" alt="Stats" />
-
 ### ⚙️ Stack
 
 **Backend**
@@ -64,14 +62,32 @@ Enfoque:
 
 <div align="center">
 
-<img width="48%" src="https://github-readme-streak-stats.herokuapp.com?user=zeert&theme=transparent&hide_border=true&ring=EE3A43&fire=EE3A43&currStreakLabel=EE3A43&sideLabels=8b949e&currStreakNum=e6edf3&sideNums=e6edf3&dates=6b7280" alt="Streak" />
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeert&layout=compact&theme=transparent&hide_border=true&title_color=EE3A43&text_color=8b949e&langs_count=8" alt="Top Languages" />
+<img width="62%" src="https://streak-stats.demolab.com?user=zeert&theme=transparent&hide_border=true&ring=EE3A43&fire=EE3A43&currStreakLabel=EE3A43&sideLabels=8b949e&currStreakNum=e6edf3&sideNums=e6edf3&dates=6b7280" alt="Streak" />
 
 <br/><br/>
 
 <img width="94%" src="https://github-readme-activity-graph.vercel.app/graph?username=zeert&bg_color=00000000&color=e6edf3&line=EE3A43&point=B42116&area=true&area_color=8f1a12&hide_border=true" alt="Activity Graph" />
 
 </div>
+
+---
+
+### 🧮 Lenguajes más usados
+
+<!--START_SECTION:langs-->
+```text
+PHP           █████████████████░░░░░   75.9%
+CSS           ███░░░░░░░░░░░░░░░░░░░   14.9%
+JavaScript    ██░░░░░░░░░░░░░░░░░░░░    8.5%
+Java          ░░░░░░░░░░░░░░░░░░░░░░    0.3%
+HTML          ░░░░░░░░░░░░░░░░░░░░░░    0.2%
+Python        ░░░░░░░░░░░░░░░░░░░░░░    0.0%
+Groovy        ░░░░░░░░░░░░░░░░░░░░░░    0.0%
+CoffeeScript  ░░░░░░░░░░░░░░░░░░░░░░    0.0%
+```
+<!--END_SECTION:langs-->
+
+<sub>⚡ Calculado sobre bytes reales de código · auto-actualizado vía GitHub Actions</sub>
 
 ---
 
