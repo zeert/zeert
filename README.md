@@ -96,12 +96,12 @@ Swift       █░░░░░░░░░░░░░░░░░░░░░  
 <!--START_SECTION:repos-->
 | Repo | Descripción | Lenguaje |
 | :--- | :--- | :--- |
+| [**asahi-m1-setup**](https://github.com/zeert/asahi-m1-setup) | MacBook Pro M1 with Fedora Asahi Remix, niri + Noctalia and a macOS feel — docs in English and Spanish |  |
 | [**blade-runner-2049-theme**](https://github.com/zeert/blade-runner-2049-theme) | Blade Runner 2049 — VS Code dark theme. Warm ambers, golds, and cyans on dark near-black backgrounds. |  |
 | [**hgi-dashboard**](https://github.com/zeert/hgi-dashboard) | — | `Python` |
 | [**grunt-base**](https://github.com/zeert/grunt-base) | Repositorio base para trabajar con Grunt y HTML | `HTML` |
 | [**tws**](https://github.com/zeert/tws) | nuevo repo de tws | `CSS` |
 | [**masterapp**](https://github.com/zeert/masterapp) | — |  |
-| [**Gestor-Proyectos**](https://github.com/zeert/Gestor-Proyectos) | — | `Java` |
 <!--END_SECTION:repos-->
 
 <sub>⚡ Actualizado automáticamente vía GitHub Actions</sub>
